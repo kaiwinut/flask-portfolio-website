@@ -1,0 +1,17 @@
+{% extends "blog.html" %}
+{% block title %}Kai's Blog{% endblock %}
+
+{% block content %}
+<div class="container content-block">
+    <h3 align="center" class="spacer">Create Post</h3>
+    <form method="POST">
+        <textarea name="text" id="text" class="form-control"></textarea>
+        <br/>
+        <div align="center">
+            <button type="submit" class="btn btn-primary spacer">Post</button>
+            <a href="{{url_for('blogpage.blog')}}"><button type="button" class="btn btn-secondary spacer">Back</button></a>
+        </div>
+        <br/>
+    </form>
+</div>
+{% endblock %}

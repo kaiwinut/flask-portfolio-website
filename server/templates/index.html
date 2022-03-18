@@ -1,0 +1,304 @@
+{% extends "template.html" %}
+{% block title %}Kai Wang{% endblock %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/homepage.css')}}">{% endblock %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark navbarScroll nav-bg">
+    <div class="container" style="z-index:1;">
+        <a class="navbar-brand" href="#">Kai Wang</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<!-- Banner -->
+<section class="banner-bg" id="home">
+    <div class="container-fluid">
+        <div class="row banner">
+            <div class="col-lg-2 col-md-2"></div>
+            <!-- Profile Image -->
+            <div class="col-lg-3 col-md-3">
+                <img src="{{url_for('static', filename='images/profile.jpg')}}" class="profile" alt="profile" />
+            </div>            
+            <div class="col-lg-7 col-md-7 banner-text">
+                <h1 class="display-1">Kai Wang</h1>
+                <p class="lead">I'm an undergraduate in Japan</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about-bg" id="about">
+    <div class="container-fluid">
+        <h2 class="text-center">About Me</h2>
+        <div class="row p-5">
+            <!-- Description -->
+            <div class="col-lg description">
+                <ul>
+                    <li><p class="lead">I'm an undergraduate student in Japan.</p></li>
+                    <li><p class="lead">I study about machine learning and robotics at the University of Tokyo.</p></li>
+                    <li><p class="lead">I write Python code for fun. This website is one of my toy projects. I also write C, JavaScript, Swift... </p></li>
+                    <li><p class="lead">I speak Chinese, English and Japanese fluently. I also know some Spanish. </p></li>
+                    <li><p class="lead">Learn more about me <a href="https://www.linkedin.com/in/kaiw-kai-wang/" target="_blank" rel="noopener noreferrer" style="color:#DA0037; text-decoration: none;">here</a>.</p></li>
+                </ul>
+
+            </div>
+            <!-- Skills -->
+            <div class="col-lg skills">
+                <div class="skill">
+                    <label class="skill-label">Language Skills</label>
+                    <div class="progress">
+                        <div class="progress-bar progress-bg" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label class="skill-label">Python</label>
+                    <div class="progress">
+                        <div class="progress-bar progress-bg" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label class="skill-label">Computer Vision</label>
+                    <div class="progress">
+                        <div class="progress-bar progress-bg" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label class="skill-label">Natural Language Processing</label>
+                    <div class="progress">
+                        <div class="progress-bar progress-bg" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label class="skill-label">Web / Game / App Development</label>
+                    <div class="progress">
+                        <div class="progress-bar progress-bg" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+<!-- Resume Section
+<section class="resume-bg" id="resume">
+    <div class="container-fluid">
+        <h1 class="text-center" style="color:#EDEDED;">Resume</h1>
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-clock"></i>
+                        <h4 class="card-title mt-3">Website Development</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='fas servicesIcon fa-layer-group'></i>
+                        <h4 class="card-title mt-3">Website Design</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='far servicesIcon fa-check-circle'></i>
+                        <h4 class="card-title mt-3">Website Deployment</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='fas servicesIcon fa-search'></i>
+                        <h4 class="card-title mt-3">SEO</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='fas servicesIcon fa-shield-alt'></i>
+                        <h4 class="card-title mt-3">DevOps</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class='fas servicesIcon fa-wrench'></i>
+                        <h4 class="card-title mt-3">QA</h4>
+                        <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+ -->
+
+<!-- Portfolio Section-->
+<section class="portfolio-bg" id="portfolio">
+    <div class="container-fluid">
+        <h1 class="text-center">My Works</h1>
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/kaiwinut/python-trr/main/docs/sample.gif" alt="Card image" style="height:180px">
+                    <div class="card-body">
+                        <h4 class="card-title">Python-trr</h4>
+                        <p class="card-text">Python-trr is an terminal app for typing practice written with Python's Curses library.</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/python-trr" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                            <a href="https://pypi.org/project/pythontrr/" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Package</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card portfolioContent">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/kaiwinut/instagram-stats-tracker/main/data/media_info.png" alt="Card image" style="height:180px">
+                    <div class="card-body">
+                        <h4 class="card-title">Instagram Stats Tracker</h4>
+                        <p class="card-text">Track and visualize data obtained from Instagram Graph API with easy Python code</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/instagram-stats-tracker" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card portfolioContent">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/sync/C5627AQHJbRMmtTyD5w/articleshare-shrink_800/0/1647530162269?e=1647709200&v=beta&t=h-Dxi-Q_4-WhxG32_D2ITp6R6aBy1DvM6mVPYp3vwHo" alt="Card image" style="height:180px">
+                    <div class="card-body">
+                        <h4 class="card-title">𝛘 Chess Engine</h4>
+                        <p class="card-text">A C++ based chess engine with UCI support that has about 1970 elo's strength.</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/X-ChessEngine" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4 mt-4">
+                <div class="card portfolioContent">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/kaiwinut/search-algorithm-visualizer/main/docs/sample.gif" alt="Card image" style="height:180px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Algorithm Visualizer</h4>
+                        <p class="card-text">Visualize search algorithms with Python's Pygame library. BFS, DFS, A* Search are supported.</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/search-algorithm-visualizer" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card portfolioContent">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/kaiwinut/flask-blog-app/main/demo/demo.png" alt="Card image" style="height:180px;">
+                    <div class="card-body">
+                        <h4 class="card-title">Flask Blog App</h4>
+                        <p class="card-text">A simple blog app created with Python's Flask backend and simple HTML / CSS frontend.</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/flask-blog-app" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4">
+                <div class="card portfolioContent">
+                    <img class="card-img-top" src="https://raw.githubusercontent.com/kaiwinut/atsumARe/main/atsumARe/Assets.xcassets/AppIcon.appiconset/1024.png" alt="Card image" style="height:180px;">
+                    <div class="card-body">
+                        <h4 class="card-title">atsumARe</h4>
+                        <p class="card-text">An AR iOS App that intergrates image recognition. Semester project for junior year in UTokyo.</p>
+                        <div class="text-center">
+                            <a href="https://github.com/kaiwinut/atsumARe" target="_blank" rel="noopener noreferrer" class="btn btn-danger links">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Contact Section-->
+<section class="contact-bg" id="contact">
+    <div class="container-fluid">
+        <h1 class="text-center">Contact Me</h1>
+
+        <div class="row icons-div">
+            <div class="col"></div>
+            <div class="col social-icons">
+                <a href="https://github.com/kaiwinut" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="col social-icons">
+                <a href="https://www.linkedin.com/in/kaiw-kai-wang/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="col social-icons">
+                <a href="https://twitter.com/__kaiw" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="col social-icons">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kaiwdev@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fab fas fa-envelope"></i></a>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

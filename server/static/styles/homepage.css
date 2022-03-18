@@ -1,0 +1,156 @@
+.nav-bg {
+    padding: 2% 5%;
+    background-color: #171717;
+}
+
+ul {
+    list-style-type: '>     ';
+}
+
+/* Banner Section */
+.banner-bg {
+    min-height:90vh;
+    background: #171717;
+    color: #EDEDED;
+    background-size:cover;
+    vertical-align: middle;
+}
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 7% 5%;
+}
+.banner-title {
+    font-size: 4rem;
+}
+.banner-description {
+    font-size: 1.5rem;
+}
+.banner-text {
+    padding: 10% 10%;
+}
+.profile{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+.nav-bg {
+    padding: 5% 5%;
+    background-color: #171717;
+}
+.profile {
+    width: 60%;
+}
+.banner {
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.banner-text {
+    text-align: center;
+}
+}
+
+/* About Section */
+.about-bg {
+    background: #444444;
+    color: #EDEDED;
+    background-size:cover;
+    padding: 7% 5%;
+}
+.description {
+    padding-bottom: 7%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.skill {
+    padding: 0 5%;
+    margin-bottom: 7%;
+}
+.progress {
+    margin: 2% 0;
+}
+.progress-bg {
+    background: #DA0037;
+}
+.skill-label {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Resume Section */
+/* .resume-bg {
+    background: #171717;
+    color: #171717;
+    background-size:cover;
+    padding: 10% 5%;
+}
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card:hover .servicesIcon {
+    color: #DA0037;
+}
+.servicesText:hover {
+    border: 1px solid #DA0037;
+} */
+
+
+/* Portfolio Section */
+.card-title {
+    text-align: center;
+}
+.portfolio-bg {
+    background: #EDEDED;
+    color: #444444;
+    background-size:cover;
+    padding: 7% 5%;
+}
+.links {
+    margin: 0 10px;
+}
+
+/* Contact Section */
+.contact-bg {
+    background: #444444;
+    color: #EDEDED;
+    background-size:cover;
+    padding: 10% 5%;
+}
+.icons-div {
+    text-align: center;
+    margin-top: 5%;
+}
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fab {
+    color: #EDEDED;
+}
+.fab:hover {
+    color: #DA0037;
+}
+
+/* Footer Section */
+#footer {
+    padding: 3% 2%;
+    background-color: #171717;
+    text-align: center;
+    color:#EDEDED;
+}

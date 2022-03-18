@@ -1,0 +1,26 @@
+.content-block {
+    min-height: 90vh;
+}
+
+.comment-card {
+    min-height: 30px;
+}
+
+.spacer {
+    margin: 20px;
+}
+
+.username {
+    font-weight: bold;
+    text-decoration: none;
+    color:black;
+    margin-right: 10px;
+}
+
+/* Footer Section */
+#footer {
+    padding: 3% 2%;
+    background-color: #444444;
+    text-align: center;
+    color:#EDEDED;
+}
